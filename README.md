@@ -1,2 +1,2 @@
 # social-network
-Social network for bloggers
+Social network for writing and reading diaries
