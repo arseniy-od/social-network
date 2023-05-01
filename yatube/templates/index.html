@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Last updates{% endblock %}
+{% block header %}Last updates on site:{% endblock %}
+{% block content %}
+    <div class="container">
+
+        {% include 'menu.html' with index=True %}
+        {% load thumbnail %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+        {% for post in page_obj %}
+            {% include 'post_preview.html' with post=post %}
+        {% endfor %}
+        {% if page_obj.has_other_pages %}
+            {% include 'paginator.html' with page=page_obj paginator=paginator %}
+        {% endif %}
+    </div>
+{% endblock %}

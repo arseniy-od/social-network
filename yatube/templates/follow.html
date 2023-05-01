@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Followings{% endblock %}
+{% block header %}Last posts from your favourite authors:{% endblock %}
+{% block content %}
+    <div class="container">
+        {% include 'menu.html' with follow=True %}
+        {% load thumbnail %}
+        {% for post in page_obj %}
+            {% include 'post_preview.html' with post=post %}
+            {% if not forloop.last %}
+                <hr>{% endif %}
+        {% empty %}
+            <div class="container text-center mt-5">
+                <div class="row">
+                    <div class="col align-self-center">
+                        <p>Subscribe to your favourite authors to see their posts here</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        {% if page_obj.has_other_pages %}
+            {% include 'paginator.html' with page=page_obj paginator=paginator %}
+        {% endif %}
+    </div>
+{% endblock %}
