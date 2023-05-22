@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %} Error 500 {% endblock %}
+{% block content %}
+
+    <main role="main" class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Error 500</h1>
+                <p class="lead">Error on server. Try to reload page or visit us again later</p>
+                <p class="lead"><a href="{% url "index" %}">Go to main page</a></p>
+            </div>
+        </div>
+    </main>
+
+{% endblock %}

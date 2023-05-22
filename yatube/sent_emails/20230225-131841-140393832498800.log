@@ -1,0 +1,25 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: Password reset on localhost:8000
+From: webmaster@localhost
+To: 1@1.com
+Date: Sat, 25 Feb 2023 13:18:41 -0000
+Message-ID: <167733112196.5898.6116356010784699465@SilverNote.localdomain>
+
+
+You're receiving this email because you requested a password reset for your user account at localhost:8000.
+
+Please go to the following page and choose a new password:
+
+http://localhost:8000/auth/reset/Mw/bk6ib5-0681e666698b8218fc5329b144bac882/
+
+Your username, in case you’ve forgotten: admin
+
+Thanks for using our site!
+
+The localhost:8000 team
+
+
+
+-------------------------------------------------------------------------------
